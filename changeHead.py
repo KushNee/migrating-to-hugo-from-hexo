@@ -14,15 +14,12 @@ for index in range(0, len(b)):
     f = open(targetDir+'/'+b[index], 'r')
     now = f.readlines()
     f.close()
-    #print('pre_now[0]: '+now[0])
     if now[0] != '+++\n':
         now[0] = '+++\n' + now[0]
-        #print('current_now[0]: {}'.format(now[0]))
     for i in range(0, 5):
         if re.search('title', now[i]):
             if now[i].find(': '):
                 if i != 0:
-                    #print('Find title')
                     now[i] = changeEquall(now[i])
                     #print('current_now[{}]: {}'.format(i, now[i]))
                 else:
@@ -42,5 +39,3 @@ for index in range(0, len(b)):
     with open(targetDir+'/'+b[index], 'w') as f2:
         f2.writelines(now)
 print('All Done')
-
-
