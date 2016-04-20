@@ -39,5 +39,3 @@ for index in range(0, len(b)):
     with open(targetDir+'/'+b[index], 'w') as f2:
         f2.writelines(now)
 print('All Done')
-
-
