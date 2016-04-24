@@ -2,7 +2,7 @@ import os
 import re
 
 """
-必须承认，这个脚本完全是个人化的，而且还有布哨错误。等有时间再修改。
+必须承认，这个脚本完全是个人化的，而且还有不少错误。等有时间再修改。
 """
 def changeEquall(StringTochange=''):
     elements = re.split(r': |\n', StringTochange)
